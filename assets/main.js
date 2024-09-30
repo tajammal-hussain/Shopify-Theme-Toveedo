@@ -415,6 +415,30 @@ var app = {
               duration: 5, // Duration of 5 seconds
               ease: 'power1.inOut', // Easing function
             });
+
+            gsap.to('.bubbles1', {
+              top: '0',
+              duration: 10,
+              rotate: 30,
+              ease: 'linear',
+              repeat: -1,
+            });
+            gsap.to('.bubbles2', {
+              top: '-200px',
+              duration: 15,
+              rotate: -30,
+              ease: 'linear',
+              delay: 2,
+              repeat: -1,
+            });
+            gsap.to('.bubbles3', {
+              top: '-200px',
+              duration: 20,
+              rotate: -30,
+              ease: 'linear',
+              delay: 5,
+              repeat: -1,
+            });
           }, 500);
         }, 1000);
 

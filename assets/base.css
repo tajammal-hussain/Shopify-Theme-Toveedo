@@ -3736,3 +3736,7 @@ sticky-header header a{
 .natureStack>* {
   grid-area: naturestack
 }
+.waterScroller section{
+  max-width: 100%;
+  width: 100%;
+}

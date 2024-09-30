@@ -114,7 +114,6 @@
 
       {{ scheme_classes | prepend: 'body' }} {
         color: rgba(var(--color-foreground), 0.75);
-        background-color: rgb(var(--color-background));
       }
 
       :root {
@@ -331,7 +330,34 @@
         {%- endif -%}
         {% sections 'header-group' %}
         <div class="home-page">
-          {{ content_for_layout }}
+          {% render 'hero-text' %}
+          {% render 'about' %}
+          <div class="page">
+            <div class="waterScroller relative h-full">
+              <img
+                src="{{  'bubbles1.svg' | asset_url }}"
+                class="bubbles1 absolute right-[20%] top-[100%] z-[10] max-w-[20px]"
+                alt=""
+              >
+              <img
+                src="{{  'bubbles2.svg' | asset_url }}"
+                class="bubbles2 absolute right-[10%] top-[100%] z-[10] max-w-[45px]"
+                alt=""
+              >
+              <img
+                src="{{  'bubbles3.svg' | asset_url }}"
+                class="bubbles3 absolute left-[10%] top-[100%] z-[10] max-w-[120px]"
+                alt=""
+              >
+
+              <div class="sticky left-0 top-0 w-full bg-blue-200">
+                <img src="{{ "bg-water.jpg" | asset_url }}" alt="" class="object-cover object-center">
+              </div>
+              <div class="flex h-full w-full flex-col items-center justify-center">
+                {{ content_for_layout }}
+              </div>
+            </div>
+          </div>
         </div>
         {% render 'flies' %}
       </div>
