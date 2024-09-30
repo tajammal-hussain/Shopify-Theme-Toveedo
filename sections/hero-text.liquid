@@ -1,0 +1,168 @@
+<div class="scroller relative h-[200vh]">
+  <div
+    class="sticky left-0 top-0 h-screen w-full"
+  >
+    <div class="relative z-[1] flex h-screen flex-col items-center justify-center  pt-[120px] pb-[120px] min-h-[800px]">
+      <div class=" absolute top-0 left-0 w-full h-full">
+        <img src="https://cdn.shopify.com/s/files/1/0903/5274/6784/files/StarsB.c4d3d47.png?v=1727555314" alt="">
+      </div>
+      <div class=" relative z-[10]">
+        <div
+          class="relative lg:w-[1140px] md:w-[1440px] ml-auto mr-auto"
+        >
+          <h4 class="font-caveat will-change-transform text-5xl leading-5 text-[#fff] font-caveat font-black uppercase-none tracking-wider text-center">
+            Prodotti tipici siciliani
+          </h4>
+          <div class="flex items-center relative justify-center lg:w-[1240px] md:w-[990px] ml-auto mr-auto flex-col">
+            <h2 class="text-center flex-grow">
+              <div class="waviy relative tracking-[-13px] lg:text-[15rem] md:text-[4rem]">
+                <span style="--i:1">J</span>
+                <span style="--i:2">U</span>
+                <span style="--i:3">D</span>
+                <span style="--i:4">A</span>
+                <span style="--i:5">I</span>
+                <span style="--i:6">C</span>
+                <span style="--i:7">A</span>
+              </div>
+            </h2>
+            <div class="description  ml-auto mr-auto text-center text-[#fff] ">
+              <h1 class="text-p max-w-[60%] ml-auto mr-auto items-right">
+                Discover a delightful collection of Jewish books that your kids will cherish. From enchanting stories to
+                vibrant illustrations, each book offers a journey into Jewish culture and values. Join us in creating
+                joyful reading experiences, all in one happy place!
+              </h1>
+              <a href="#" class="list-menu__item !inline-block	leading-[42px] mt-[30px]">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="book-image w-[250px] absolute left-0 z-[-1] top-0">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0903/5274/6784/files/book.jpg?v=1727477389"
+              alt="book-image"
+              class="rotate-[-20deg]"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="scroll-more absolute flow-root bottom-[10%] left-[50%] w-[150px] h-[150px] transform -translate-x-1/2"
+      >
+        <div class="relative flex items-center flex-col w-full h-full">
+          <svg
+            id="circular"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="
+              max-w-full h-auto
+              transform: translate(0%, 0%); absolute top-0 left-0 w-full h-full
+            "
+          >
+            <defs>
+              <path id="circle" d="M 50, 50
+                       m -50, 0
+                       a 50,50 0 1,0 100,0
+                       a 50,50 0 1,0 -100,0"></path>
+            </defs>
+            <text id="brand--text" fill="#FAF3E7" font-size="6.7" font-family="Barlow" font-weight="semibold" letter-spacing="3" width="100">
+              <textPath xlink:href="#circle">• Prodotti tipici siciliani • From Sicily • Crescente</textPath></text>
+          </svg>
+          <img
+            decoding="async"
+            src="https://www.crescentesicily.com/wp-content/uploads/2023/09/white-arrow-11.svg"
+            alt="Descrizione dell'immagine"
+            style="width: 9px; position: relative; top:50%; transform:translateY(-50%)"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="will-change relative z-[2] h-screen w-full transform bg-gradient-to-t from-hero-dark"></div>
+  <div class="will-change relative z-[2] h-screen w-full transform bg-hero-dark"></div>
+</div>
+{% schema %}
+{
+  "name": "Hero Text",
+  "settings": [
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center",
+      "label": "Desktop Content Position"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "Full Width"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Your Heading Here",
+          "label": "Heading Text"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" }
+          ],
+          "default": "h1",
+          "label": "Heading Size"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Your text here.</p>",
+          "label": "Text Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
